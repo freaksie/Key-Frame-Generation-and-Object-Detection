@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Stockopedia </title>
+    <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <!-- Meta -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="description" content="CodedThemes">
+      <meta name="keywords" content=" Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+      <meta name="author" content="CodedThemes">
+      <!-- Favicon icon -->
+      <link rel="icon" href="{{url_for('static', filename='favicon.jpg')}}" type="image/x-icon">
+      <!-- Google font-->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+      <!-- Required Fremwork -->
+      <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap.min.css')}}">
+      <!-- themify-icons line icon -->
+      <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='themify-icons.css')}}">
+      <!-- ico font -->
+      <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='icofont.css')}}">
+      <!-- Style.css -->
+      <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+      <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='jquery.mCustomScrollbar.css')}}">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <!-- Pre-loader start --> 
+    <div class="theme-loader">
+        <div class="ball-scale">
+            <div class='contain'>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pre-loader end -->
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+
+            <nav class="navbar header-navbar pcoded-header">
+                <div class="navbar-wrapper">
+
+                    <div class="navbar-logo">
+                        <a href="index.html">
+                            <img class="img-fluid" src="{{url_for('static', filename='logo (2).png')}}" alt="Theme-Logo" />
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    <div class="pcoded-content">
+                        <div class="pcoded-inner-content">
+                            <div class="main-body">
+                                <div class="page-wrapper">
+
+                                    <div class="page-body">
+                                        <div class="row">
+                                            <!-- card1 start -->
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <!-- <i class="icofont icofont-pie-chart bg-c-blue card1-icon"> -->
+                                                        <img id="0" class="icofont icofont-pie-chart card1-icon" src="{{url_for('static', filename='SBIN.png')}}" onclick="getvalue(this.id)" />
+                                                        <!-- </i> -->
+                                                        <span class="text-c-blue f-w-600">SBI</span>
+                                                        <h4 id="pred_sbi"> </h4>
+                                                        <div>
+                                                            <!-- <span class="f-left m-t-10 text-muted">
+                                                                <i class="text-c-blue f-16 icofont icofont-warning m-r-10"></i>Get more space
+                                                            </span> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- card1 end -->
+                                            <!-- card1 start -->
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <!-- <i class="icofont icofont-ui-home bg-c-pink card1-icon"></i> -->
+                                                        <img id="1" class="icofont icofont-pie-chart card1-icon" src="{{url_for('static', filename='SUNP.png')}}" onclick="getvalue(this.id)" />
+                                                        <span class="text-c-green f-w-600">Sun Pharma</span>
+                                                        <h4 id="pred_sun"> </h4>
+                                                        <div>
+                                                            <!-- <span class="f-left m-t-10 text-muted">
+                                                                <i class="text-c-pink f-16 icofont icofont-calendar m-r-10"></i>Last 24 hours
+                                                            </span> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- card1 end -->
+                                            <!-- card1 start -->
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <!-- <i class="icofont icofont-warning-alt bg-c-green card1-icon"></i> -->
+                                                        <img id="2" class="icofont icofont-pie-chart card1-icon" src="{{url_for('static', filename='TATA.png')}}" onclick="getvalue(this.id)" />
+                                                        <span class="text-c-pink f-w-600">Tata Steel</span>
+                                                        <h4 id="pred_ts"> </h4>
+                                                        <div>
+                                                            <!-- <span class="f-left m-t-10 text-muted">
+                                                                <i class="text-c-green f-16 icofont icofont-tag m-r-10"></i>Tracked via microsoft
+                                                            </span> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- card1 end -->
+                                            <!-- card1 start -->
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <!-- <i class="icofont icofont-social-twitter bg-c-yellow card1-icon">
+                                                        </i> -->
+                                                        <img id="3" class="icofont icofont-pie-chart card1-icon" src="{{url_for('static', filename='TCSER.png')}}"  onclick="getvalue(this.id)" />
+                                                        <span class="text-c-yellow f-w-600">TCS</span>
+                                                        <h4 id="pred_tcs"></h4>
+                                                        <div>
+                                                            <!-- <span class="f-left m-t-10 text-muted">
+                                                                <i class="text-c-yellow f-16 icofont icofont-refresh m-r-10"></i>Just update
+                                                            </span> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- card1 end -->
+                                            <!-- Statestics Start -->
+                                            <div class="col-md-12 col-xl-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>Statestics</h5>
+                                                        <div class="card-header-left ">
+                                                        </div>
+                                                    </div>
+                                                     <div class="card-block">
+                                                        <div>
+                                                            <canvas id="myChart"></canvas>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Warning Section Ends -->
+<!-- Required Jquery -->
+<script>
+    function getvalue(id_val) {
+    let obj = {};
+    // let stocks = document.getElementById('stocks').value; 
+    obj.query=id_val;
+
+    let mychart=document.getElementById("myChart").getContext('2d');
+    console.log("obj:", obj);
+    postData('https://stockopedia.herokuapp.com/', obj)
+        .then(data => {
+            if (id_val=="0"){
+                $('#pred_sbi').html(data['ans'])
+                $('#pred_sun').html(null)
+                $('#pred_ts').html(null)
+                $('#pred_tcs').html(null)
+                let chart = new Chart(mychart,{
+                    type: 'line',
+                    data:{
+                        labels:data['date'],
+                        datasets:[{
+                            label:'close of sbi',
+                            data:data['close'],
+                            backgroundColor: 'rgba(173, 38, 38, 0.58)',
+                            borderColor : 'red'
+                        }]
+                    },
+                    option:{}
+                });
+            }
+            else if (id_val=="1"){
+                $('#pred_sun').html(data['ans'])
+                $('#pred_sbi').html(null)
+                $('#pred_ts').html(null)
+                $('#pred_tcs').html(null)
+                let chart = new Chart(mychart,{
+                    type: 'line',
+                    data:{
+                        labels:data['date'],
+                        datasets:[{
+                            label:'close of sunpharma',
+                            data:data['close'],
+                            backgroundColor: 'rgba(173, 38, 38, 0.58)',
+                            borderColor : 'red'
+                        }]
+                    },
+                    option:{}
+                });
+            }
+            else if (id_val=="2"){
+                $('#pred_sbi').html(null)
+                $('#pred_sun').html(null)
+                $('#pred_ts').html(data['ans'])
+                $('#pred_tcs').html(null)
+                let chart = new Chart(mychart,{
+                    type: 'line',
+                    data:{
+                        labels:data['date'],
+                        datasets:[{
+                            label:'close of tata steel',
+                            data:data['close'],
+                            backgroundColor: 'rgba(173, 38, 38, 0.58)',
+                            borderColor : 'red'
+                        }]
+                    },
+                    option:{}
+                });
+            }
+            else {
+                $('#pred_sbi').html(null)
+                $('#pred_sun').html(null)
+                $('#pred_ts').html(null)
+                $('#pred_tcs').html(data['ans'])
+                let chart = new Chart(mychart,{
+                    type: 'line',
+                    data:{
+                        labels:data['date'],
+                        datasets:[{
+                            label:'close of tcs',
+                            data:data['close'],
+                            backgroundColor: 'rgba(173, 38, 38, 0.58)',
+                            borderColor : 'red'
+                        }]
+                    },
+                    option:{}
+                });
+            }
+            //console.log(data);
+        });
+    }
+    async function postData(url = '', data = {}) {
+    console.log(data);
+    const response = await fetch(url, {
+        method: 'POST', 
+        mode: 'cors', 
+        cache: 'no-cache', 
+        credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+        },
+        redirect: 'follow',
+        referrerPolicy: 'no-referrer', 
+        body: JSON.stringify(data) 
+    });
+    console.log(response);
+    return response.json(); 
+}
+</script>  
+<script type="text/javascript" src="{{url_for('static', filename='jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='jquery-ui.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='popper.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='bootstrap.min.js')}}"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="{{url_for('static', filename='jquery.slimscroll.js')}}"></script>
+<!-- modernizr js -->
+<script type="text/javascript" src="{{url_for('static', filename='modernizr.js')}}"></script>
+<!-- am chart -->
+<script src="{{url_for('static', filename='amcharts.min.js')}}"></script>
+<script src="{{url_for('static', filename='serial.min.js')}}"></script>
+<!-- Custom js -->
+<script type="text/javascript" src="{{url_for('static', filename='custom-dashboard.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='script.js')}}"></script>
+<script type="text/javascript " src="{{url_for('static', filename='SmoothScroll.js')}}"></script>
+<script src="{{url_for('static', filename='pcoded.min.js')}}"></script>
+<script src="{{url_for('static', filename='demo-12.js')}}"></script>
+<script src="{{url_for('static', filename='jquery.mCustomScrollbar.concat.min.js')}}"></script>
+<script>
+var $window = $(window);
+var nav = $('.fixed-button');
+    $window.scroll(function(){
+        if ($window.scrollTop() >= 200) {
+         nav.addClass('active');
+     }
+     else {
+         nav.removeClass('active');
+     }
+ });
+</script>
+</body>
+
+</html>
